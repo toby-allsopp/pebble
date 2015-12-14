@@ -1,4 +1,5 @@
 com.mitchellbosecke.pebble
+com.mitchellbosecke.pebble.cache
 com.mitchellbosecke.pebble.error
 com.mitchellbosecke.pebble.extension
 com.mitchellbosecke.pebble.extension.core
