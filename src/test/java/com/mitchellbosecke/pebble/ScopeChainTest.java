@@ -19,20 +19,6 @@ import static org.junit.Assert.*;
 public class ScopeChainTest extends AbstractTest {
 
     @Test
-    public void testLocalScopeAtTop() throws PebbleException, IOException {
-        ScopeChain scopeChain = new ScopeChain();
-        scopeChain.pushScope();
-        scopeChain.put("key", "value");
-        assertEquals("value", scopeChain.get("key"));
-        scopeChain.pushLocalScope();
-        assertEquals(false, scopeChain.containsKey("key"));
-        assertNull(scopeChain.get("key"));
-        scopeChain.put("key", "value2");
-        assertEquals(true, scopeChain.containsKey("key"));
-        assertEquals("value2", scopeChain.get("key"));
-    }
-
-    @Test
     public void testSet() throws PebbleException, IOException {
         ScopeChain scopeChain = new ScopeChain();
         scopeChain.pushScope();
